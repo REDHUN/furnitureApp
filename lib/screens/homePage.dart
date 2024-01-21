@@ -9,8 +9,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     if (MediaQuery.of(context).size.width < 1000) {}
     return Scaffold(
-      // backgroundColor: Colors.white,
-
+      backgroundColor: const Color.fromARGB(255, 255, 255, 255),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.start,

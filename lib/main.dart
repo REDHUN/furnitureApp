@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:furnitureapp/screens/homePage.dart';
+import 'package:furnitureapp/features/home/ui/home.dart';
 
 void main() {
   // WidgetsFlutterBinding.ensureInitialized();
@@ -23,9 +23,10 @@ class MyApp extends StatelessWidget {
       systemNavigationBarIconBrightness: Brightness.dark, //bottom bar icons
     ));
 
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      theme: ThemeData(primaryColor: Colors.teal),
+      home: Home(),
     );
   }
 }

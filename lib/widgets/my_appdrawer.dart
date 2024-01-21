@@ -56,21 +56,16 @@ class MyAppDrawer extends StatelessWidget {
             margin: EdgeInsets.all(40),
             padding: EdgeInsets.only(left: 25),
             decoration: BoxDecoration(
-                color: Colors.white,
-                boxShadow: [
-                  BoxShadow(
-                      color: Colors.grey.shade200,
-                      spreadRadius: 4,
-                      blurRadius: 7)
-                ],
-                borderRadius: BorderRadius.circular(20)),
+                color: const Color.fromARGB(255, 255, 252, 252),
+                borderRadius: BorderRadius.circular(30)),
             height: 50,
             width: double.infinity,
             child: const TextField(
               decoration: InputDecoration(
-                  border: InputBorder.none,
                   hintText: 'Search',
-                  icon: Icon(Icons.search)),
+                  icon: Icon(Icons.search),
+                  enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(width: 1, color: Colors.black))),
             ),
           ),
         ],
