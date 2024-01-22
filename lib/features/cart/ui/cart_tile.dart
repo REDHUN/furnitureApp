@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:furnitureapp/features/home/bloc/home_bloc.dart';
+import 'package:furnitureapp/features/cart/bloc/cart_bloc.dart';
 import 'package:furnitureapp/features/home/models/home_product_data_model.dart';
 
-class DataTile extends StatelessWidget {
-  const DataTile(
-      {super.key, required this.productDataModel, required this.homeBloc});
+class CartTile extends StatelessWidget {
+  const CartTile(
+      {super.key, required this.productDataModel, required this.cartBloc});
   final ProductDataModel productDataModel;
-  final HomeBloc homeBloc;
+  final CartBloc cartBloc;
 
   @override
   Widget build(BuildContext context) {
@@ -50,15 +50,15 @@ class DataTile extends StatelessWidget {
                 children: [
                   IconButton(
                     onPressed: () {
-                      homeBloc.add(HomePageWhishListButtonClicked(
-                          clickedProduct: productDataModel));
+                      // homeBloc.add(HomePageWhishListButtonClicked(
+                      //     clickedProduct: productDataModel));
                     },
                     icon: const Icon(Icons.favorite_border),
                   ),
                   IconButton(
                       onPressed: () {
-                        homeBloc.add(HomePageCartButtonClicked(
-                            clickedProduct: productDataModel));
+                        // homeBloc.add(HomePageCartButtonClicked(
+                        //     clickedProduct: productDataModel));
                       },
                       icon: const Icon(Icons.shopping_bag))
                 ],
