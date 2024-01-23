@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:furnitureapp/features/cart/bloc/cart_bloc.dart';
 import 'package:furnitureapp/features/home/models/home_product_data_model.dart';
+import 'package:furnitureapp/features/wishlist/bloc/wishlist_bloc.dart';
 
-class CartTile extends StatelessWidget {
-  const CartTile(
-      {super.key, required this.productDataModel, required this.cartBloc});
+class WishlistTile extends StatelessWidget {
+  const WishlistTile(
+      {super.key, required this.wishlistBloc, required this.productDataModel});
   final ProductDataModel productDataModel;
-  final CartBloc cartBloc;
-
+  final WishlistBloc wishlistBloc;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -48,10 +47,17 @@ class CartTile extends StatelessWidget {
               ),
               Row(
                 children: [
+                  // IconButton(
+                  //   onPressed: () {
+                  //     // homeBloc.add(HomePageWhishListButtonClicked(
+                  //     //     clickedProduct: productDataModel));
+                  //   },
+                  //   icon: const Icon(Icons.favorite_border),
+                  // ),
                   IconButton(
                       onPressed: () {
-                        cartBloc.add(CartRomoveFromCartEvent(
-                            cartItem: productDataModel));
+                        wishlistBloc.add(WishListRemoveEvent(
+                            wishlistitem: productDataModel));
                       },
                       icon: const Icon(Icons.delete))
                 ],
